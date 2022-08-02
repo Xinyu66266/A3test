@@ -97,8 +97,6 @@ function setup() {
       text("Hope to see you be confident and", windowWidth/2, windowHeight/5*3.5);
       text("get out of your comfort zone", windowWidth/2, windowHeight/5*4);
       sendTheMessage();
-      getLocation();
-      showPosition();
    // draw something
     } else if (NFC2 != null) {
    // do something for nfc2
@@ -132,20 +130,6 @@ function setup() {
    //no paramters do something else
     }
   
-
-  /*
-    if (noParams == false) {
-      sendTheMessage();
-    } else {
-      fetchMessages();
-      noStroke();
-      fill(255, 0 , 0);
-      text("Home (NFC1)", windowWidth*0.25, windowHeight/2);
-      fill(0, 0, 255);
-      text("School (NFC2)", windowWidth*0.75, windowHeight/2);
-
-    }
-    */
 }
   
 function draw() {
@@ -230,40 +214,6 @@ function myTimer() {
   document.getElementById("demo").innerHTML = d.toLocaleTimeString();
   }
 
-
-
-/*function fetchGeo() {
-  const message2 = document.querySelector('#message');
-
-  if (!navigator.geolocation) {
-  message2.textContent = `Your browser doesn't support Geolocation`;
-  message2.classList.add('error');
-  return;
-}
-
- const btn = document.querySelector('#show');
-    btn.addEventListener('click', function () {
-        // get the current position
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    });
-
-}
-
-
-function onSuccess(position) {
-  const {
-      latitude,
-      longitude
-  } = position.coords;
-  
-  message2.classList.add('success');
-  message2.textContent = `Your location: (${latitude},${longitude})`;
-}
-  
-function onError() {
-  message2.classList.add('error');
-  message2.textContent = `Failed to get your location!`;
-}*/
 
 var x = document.getElementById("demo");
 
